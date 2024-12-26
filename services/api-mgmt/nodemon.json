@@ -1,0 +1,9 @@
+{
+  "watch": ["src", "../../packages/**/*"],
+  "ext": "ts,json",
+  "ignore": ["src/**/*.test.ts", "src/**/*.spec.ts", "dist", "node_modules"],
+  "exec": "npm run build && npm run start:dev",
+  "delay": "1",
+  "restartable": "rs",
+  "verbose": true
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@repo/logger",
+  "version": "0.0.0",
+  "description": "",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "eslint": "eslint ./src",
+    "eslint:fix": "eslint ./src --fix",
+    "clean": "clear-package-json package.json -o clean-package.json --fields scripts && move clean-package.json package.json"
+  },
+  "license": "UNLICENSED"
+}
